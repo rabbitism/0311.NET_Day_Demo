@@ -25,6 +25,7 @@
     </Window.Styles>
     <Grid ColumnDefinitions="Auto, *, Auto">
         <Carousel
+            Classes="Line"
             Grid.Column="1"
             Name="carouse"
             Theme="{DynamicResource TestCarousel}">
