@@ -20,7 +20,7 @@
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="FontWeight" Value="600" />
-            <Setter Property="FontSize" Value="40" />
+            <Setter Property="FontSize" Value="30" />
         </Style>
     </Window.Styles>
     <Grid ColumnDefinitions="Auto, *, Auto">
@@ -30,16 +30,16 @@
             Name="carouse"
             Theme="{DynamicResource TestCarousel}">
             <Border Background="#EAF5FF">
-                <TextBlock Text="Welcome to .NET Dev Day in Shanghai" />
+                <TextBlock Text="1. Welcome to .NET Dev Day in Shanghai" />
             </Border>
             <Border Background="#F9F9F9">
-                <TextBlock Text="This session is about Avalonia" />
+                <TextBlock Text="2. This session is about Avalonia" />
             </Border>
             <Border Background="#FFF8EA">
-                <TextBlock Text="Avalonia is a cross-platform UI framework" />
+                <TextBlock Text="3. Avalonia is a cross-platform UI framework" />
             </Border>
             <Border Background="#FEF2ED">
-                <TextBlock Text="My name is Dong Bin 董彬" />
+                <TextBlock Text="4. My name is Dong Bin 董彬" />
             </Border>
         </Carousel>
     </Grid>

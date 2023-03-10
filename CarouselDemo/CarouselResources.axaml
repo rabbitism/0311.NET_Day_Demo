@@ -137,10 +137,9 @@
                         Items="{TemplateBinding Items,
                                                 Converter={StaticResource ItemsConverter}}"
                         Margin="0,8"
-                        MaxHeight="20"
                         Name="PART_ItemsPresenter2"
                         SelectedIndex="{Binding SelectedIndex, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
-                        VerticalAlignment="Center">
+                        VerticalAlignment="Bottom">
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Orientation="Horizontal" />
