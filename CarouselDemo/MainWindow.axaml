@@ -1,9 +1,45 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="CarouselDemo.MainWindow"
-        Title="CarouselDemo">
-    Welcome to Avalonia!
+<Window
+    Title="CarouselDemo"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CarouselDemo.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="CarouselResources.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontWeight" Value="600" />
+            <Setter Property="FontSize" Value="40" />
+        </Style>
+    </Window.Styles>
+    <Grid ColumnDefinitions="Auto, *, Auto">
+        <Carousel
+            Grid.Column="1"
+            Name="carouse"
+            Theme="{DynamicResource TestCarousel}">
+            <Border Background="#EAF5FF">
+                <TextBlock Text="Welcome to .NET Dev Day in Shanghai" />
+            </Border>
+            <Border Background="#F9F9F9">
+                <TextBlock Text="This session is about Avalonia" />
+            </Border>
+            <Border Background="#FFF8EA">
+                <TextBlock Text="Avalonia is a cross-platform UI framework" />
+            </Border>
+            <Border Background="#FEF2ED">
+                <TextBlock Text="My name is Dong Bin 董彬" />
+            </Border>
+        </Carousel>
+    </Grid>
 </Window>
